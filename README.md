@@ -1,11 +1,14 @@
 #  Leveraging the Video-level Semantic Consistency of Event for Audio-visual Event Localization.
 PyTorch implementation of our TMM 2023 paper:  
 Leveraging the Video-level Semantic Consistency of Event for Audio-visual Event Localization.
-——————————————————————————————————————————————————————————————————————————————————————————————
+
 ## Data Preparation
 We highly appreciate [@YapengTian/AVE-ECCV2018](https://github.com/YapengTian/AVE-ECCV18) and [@Jinxing Zhou/PSP-CVPR2021](https://github.com/jasongief/PSP_CVPR_2021) for their great work and sharing.
+
 The AVE dataset and the extracted audio and visual features can be downloaded from [here](https://github.com/YapengTian/AVE-ECCV18).
+
 Other preprocessed files used in this repository can be downloaded from [here](https://drive.google.com/drive/folders/1q8GYBqfkyDDAnVMClrMTXR9YzH9UPcSM?usp=sharing).
+
 All the required data are listed below, and these files should be placed into the ``data`` folder.
 <pre><code>
 audio_feature.h5  visual_feature.h5  audio_feature_noisy.h5 visual_feature_noisy.h5
