@@ -160,8 +160,10 @@ cython_debug/
 #.idea/
 
 # 忽略 dataset 目录
-data/
+data0/
 wandb/
 figures/
 model1/
-pretrined-model/
+pretrained-model/
+.idea/
+ideavis.py
