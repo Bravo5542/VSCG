@@ -157,7 +157,7 @@ def val(args, net_model):
     video_inputs = video_inputs.cuda()
     labels = labels.numpy()
 
-    #scores_avg, x_labels, g_audio, g_video = net_model(audio_inputs, video_inputs, args.threshold) # shape:
+
     scores_avg, x_labels, hout_avg = net_model(audio_inputs, video_inputs) # shape
     # x_labels: [bs, 10, 29]
     x_labels = F.softmax(x_labels, dim=-1)
@@ -185,7 +185,7 @@ def test(args, net_model, model_path=None):
     video_inputs = video_inputs.cuda()
     labels = labels.numpy()
 
-    #scores_avg, x_labels, g_audio, g_video = net_model(audio_inputs, video_inputs, args.threshold) # shape:
+
     scores_avg, x_labels, hout_avg = net_model(audio_inputs, video_inputs) # shape:
     x_labels = F.softmax(x_labels, dim=-1)
     x_labels = x_labels.cpu().data.numpy()

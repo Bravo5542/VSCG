@@ -105,10 +105,6 @@ def train(args, net_model, optimizer, criterion, criterion_event):
         if (epoch+1) % 120 == 0 and epoch > 200:
             optimizer.update_lr()
         
-        #if (epoch+1) % 25 == 0 and epoch < 40:
-            #optimizer.update_lr()
-        #if (epoch+1) % 125 == 0:
-            #optimizer.update_lr()
 
         end = time.time()
         epoch_l.append(epoch_loss)
@@ -118,7 +114,7 @@ def train(args, net_model, optimizer, criterion, criterion_event):
         print("=== Epoch {%s}   lr: {%.6f} | Loss: [{%.4f}] loss_cls: [{%.4f}] | loss_frame: [{%.4f}] | training_acc {%.4f}" \
             % (str(epoch), optimizer._optimizer.param_groups[0]['lr'], (epoch_loss) / n, epoch_loss_cls/n, epoch_loss_avps/n, acc))
 
-        if epoch != 0:
+        if epoch % args.save_epoch == 0 and epoch != 0:
             val_acc = val(args, net_model)
             # print('val accuracy:', val_acc, 'epoch=', epoch)
             if val_acc >= best_val_acc:
@@ -126,7 +122,7 @@ def train(args, net_model, optimizer, criterion, criterion_event):
                 # print('best val accuracy:', best_val_acc.item())
                 print('best val accuracy: {} ***************************************'.format(best_val_acc))
                 
-        if epoch != 0 :
+        if epoch % args.save_epoch == 0 and epoch != 0 :
             test_acc = test(args, net_model)
             # print('test accuracy:', test_acc, 'epoch=', epoch)
             if test_acc >= best_test_acc:
