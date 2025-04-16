@@ -1,5 +1,5 @@
 #  Leveraging the Video-level Semantic Consistency of Event for Audio-visual Event Localization.
-## Yuanyuan Jiang (jyy55lesley@gmail.com), Jianqin Yin and Yonghao Dang 
+### Yuanyuan Jiang (jyy55lesley@gmail.com), Jianqin Yin and Yonghao Dang 
 PyTorch implementation of our TMM 2023 paper:  
 [Leveraging the Video-level Semantic Consistency of Event for Audio-visual Event Localization](https://ieeexplore.ieee.org/abstract/document/10286391)
 
